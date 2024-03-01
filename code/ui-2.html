@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LaunchCraft</title>
+    <link rel="stylesheet" href="/code/ui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Grab the values from the input fields
+        var thrustRequirements = document.querySelector('[name="thrustRequirements"]').value;
+        var specificHeatRatio = document.querySelector('[name="specificHeatRatio"]').value;
+        var chamberTemperature = document.querySelector('[name="chamberTemperature"]').value;
+        var chamberPressure = document.querySelector('[name="chamberPressure"]').value;
+        var operatingPressure = document.querySelector('[name="operatingPressure"]').value;
+        var gasConstant = document.querySelector('[name="gasConstant"]').value;
+
+        // Update the results in the results box
+        document.getElementById('thrust-result').textContent = "Thrust Requirements: " + thrustRequirements;
+        document.getElementById('heat-ratio-result').textContent = "Specific Heat Ratio: " + specificHeatRatio;
+        document.getElementById('temp-result').textContent = "Chamber Temperature: " + chamberTemperature;
+        document.getElementById('pressure-result').textContent = "Chamber Pressure: " + chamberPressure;
+        document.getElementById('operating-pressure-result').textContent = "Desired Operating Pressure: " + operatingPressure;
+        document.getElementById('gas-constant-result').textContent = "Specific Gas Constant: " + gasConstant;
+    }
+
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <p class="logo-text">Launch<br>Craft</p>
+        </div>
+        <div class="buttons">
+            <button class="Import">Export/Import</button>
+            <button class="Settings">Settings</button>
+        </div>
+    </div>
+    <div class="main-container">
+        <form class="inputs" onsubmit="handleFormSubmit(event)">
+            <div class="input-box">
+                <input type="text" name="thrustRequirements" placeholder="Enter Your Thrust Requirements">
+                <input type="text" name="specificHeatRatio" placeholder="Enter Your Specific Heat Ratio">
+                <input type="text" name="chamberTemperature" placeholder="Enter Your Chamber Temperature">
+                <input type="text" name="chamberPressure" placeholder="Enter Your Chamber Pressure">
+                <input type="text" name="operatingPressure" placeholder="Enter Your Desired Operating Pressure">
+                <input type="text" name="gasConstant" placeholder="Enter Your Specific Gas Constant">
+                <div class="input-button">
+                    <button type="submit" class="calculate">Calculate</button>
+                    <button type="reset" class="reset">Reset</button>
+                </div>  
+            </div>
+        </form>
+        <div class="results-box">
+            <h3>Results</h3>
+            <p id="thrust-result">Thrust Requirements: -</p>
+            <p id="heat-ratio-result">Specific Heat Ratio: -</p>
+            <p id="temp-result">Chamber Temperature: -</p>
+            <p id="pressure-result">Chamber Pressure: -</p>
+            <p id="operating-pressure-result">Desired Operating Pressure: -</p>
+            <p id="gas-constant-result">Specific Gas Constant: -</p>
+        </div>
+    </div>
+</body>
+</html>

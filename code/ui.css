@@ -1,0 +1,100 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: grey;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    padding: 8px 5px 5px 8px;
+    margin-right: 8px;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.logo-text {
+    font-family: "Faster One", system-ui;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.logo {
+    
+    justify-content: space-around;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    
+}
+
+
+input {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 20px;
+    width: 220px;
+}
+
+button {
+    display: ;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 40px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.input-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.calculate {
+    background-color: green;
+    color: white;
+}
+
+.reset {
+    background-color: red;
+    color: white;
+}
+
+.results-box {
+    background-color: #f9f9f9; /* Light grey background, similar to your input box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    padding: 20px; /* Space inside the box */
+    margin-top: 20px; /* Space between the input box and the results box */
+    width: fit-content; /* Adjust the width as needed, or use 'fit-content' for automatic sizing */
+}
+
+.results-box h3 {
+    margin-top: 0;
+    color: #333; /* Dark grey color for the heading */
+}
+
+.results-box p {
+    background-color: white; /* White background for the results */
+    border: 1px solid #ddd; /* A light border for each result */
+    padding: 10px; /* Spacing inside each result */
+    margin: 8px 0; /* Space between each result */
+}
